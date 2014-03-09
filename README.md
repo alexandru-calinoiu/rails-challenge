@@ -1,7 +1,7 @@
 # Rails Programming Task
 
 ### In order to be considered for a Rails position, you must complete the following steps.
-*Note: This task should take no longer than 1-2 hours at the most to complete.*
+*Note: This task should take no longer than 2 hours at the most to complete.*
 
 
 ### Prerequisites
@@ -70,7 +70,7 @@
       - 2 should be linked to customer 2
 
 
-##### Create a Visual Representation of Different Charges:
+##### Create a Visual Representation of Different Charges using backbone, you will have to scaffold a backbone project inside the rails app and show the 3 lists:
 
 On the view that shows all charges (most likely the *GET /charges* route), create three lists with H1 headers. 
 
