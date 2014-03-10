@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require moment.min
 //= require jquery_ujs
 //= require underscore
 //= require backbone

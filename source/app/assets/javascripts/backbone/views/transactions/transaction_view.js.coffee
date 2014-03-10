@@ -15,5 +15,6 @@ class Billing.Views.Transactions.TransactionView extends Backbone.View
     return false
 
   render: ->
+    @model.set("created", moment(@model.get("date")).format("YYYY-MM-DD"))
     @$el.html(@template(@model.toJSON() ))
     return this

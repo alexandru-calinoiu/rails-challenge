@@ -7,7 +7,9 @@
     window.router = new Billing.Routers.TransactionsRouter({transactions: <%= @transactions.to_json(
       include: {
         :customer => {methods: [:full_name]}
-      }).html_safe -%>});
+      },
+      methods: [:status]
+      ).html_safe -%>});
     Backbone.history.start();
   });
 </script>

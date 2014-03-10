@@ -6,15 +6,16 @@ class Billing.Views.Transactions.IndexView extends Backbone.View
   initialize: () ->
     @collection.bind('reset', @addAll)
 
-  addAll: () =>
-    @collection.each(@addOne)
-
-  addOne: (transaction) =>
-    view = new Billing.Views.Transactions.TransactionView({model : transaction})
-    @$("tbody").append(view.render().el)
+  addTransactions: (status, condition) =>
+    @$el.append @template(status: status)
+    _.each @collection.where(condition), (transaction) =>
+      view = new Billing.Views.Transactions.TransactionView({model : transaction})
+      @$("#table#{status} tbody").append(view.render().el)
 
   render: =>
-    @$el.html(@template(transactions: @collection.toJSON() ))
-    @addAll()
+    @$el.html ""
+    @addTransactions("Failed",      status: "failed")
+    @addTransactions("Disputed",    status: "disputed")
+    @addTransactions("Successful",  status: "successful")
 
     return this
