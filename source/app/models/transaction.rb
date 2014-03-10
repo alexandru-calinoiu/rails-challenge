@@ -5,7 +5,7 @@ class Transaction < ActiveRecord::Base
   validates :customer_id, presence: true
 
   def created
-    created_at
+    created_at.to_i
   end
 
 end
