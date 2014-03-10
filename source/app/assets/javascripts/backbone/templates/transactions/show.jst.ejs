@@ -1,0 +1,19 @@
+<dl>
+  <dt>Customer</dt>
+  <dd><%= customer.full_name %></dd>
+  <dt>Amount</dt>
+  <dd><%= amount %> <%= currency %></dd>
+  <dt>Created</dt>
+  <dd><%= moment(created_at).format("YYYY-MM-DD") %></dd>
+  <dt>Status</dt>
+  <dd>
+    <% if (!paid) { %>
+      Failed
+    <% } else if (refunded) { %>
+      Disputed
+    <% } else { %>
+      Successful
+    <% } %>
+  </dd>
+</dl>
+<a href="#/index">Back</a>
