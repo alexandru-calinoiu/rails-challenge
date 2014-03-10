@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/codebrew/backbone-rails.git
+  revision: dc1a49f46cfb554c989ee449794f54bea2c3ef32
+  specs:
+    rails-backbone (1.1.0)
+      coffee-script
+      ejs
+      jquery-rails
+      railties
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,8 +37,6 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     atomic (1.1.15)
-    backbone-rails (1.1.0)
-      rails (>= 3.0.0)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -52,6 +60,7 @@ GEM
     coffee-script-source (1.7.0)
     database_cleaner (1.0.1)
     diff-lcs (1.2.5)
+    ejs (1.1.1)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.4.0)
@@ -150,7 +159,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  backbone-rails (~> 1.1.0)
   better_errors
   capybara (~> 2.1.0)
   capybara-webkit (~> 1.1.1)
@@ -161,6 +169,7 @@ DEPENDENCIES
   jquery-rails
   quiet_assets
   rails (= 4.0.0)
+  rails-backbone!
   rspec-rails (~> 2.14.1)
   sass-rails (~> 4.0.0)
   sdoc
