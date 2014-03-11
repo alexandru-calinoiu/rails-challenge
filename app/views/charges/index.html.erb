@@ -1,0 +1,24 @@
+<h1>Listing charges</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Paid</th>
+      <th>Amount</th>
+      <th>Currency</th>
+      <th>Refunded</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  	<% {"failed" => 2, "disputed" => 3, "successful" => 1 }.each_pair do |key, value| %>
+  		<%= render "chargelist", :key => key, :value => value %>
+  	<% end %>
+  </tbody>
+</table>	
+
+<br>
+
+<%= link_to 'New Charge', new_charge_path %>

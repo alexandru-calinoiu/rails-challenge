@@ -1,0 +1,14 @@
+<tr class="status_name"><td><h1><%= key %></h1></td></tr>
+<% @charges.each do |charge| %>
+  <% if charge.status == value %>
+	  <tr class=<%= key %>>
+	    <td><%= charge.paid %></td>
+	    <td><%= charge.amount %></td>
+	    <td><%= charge.currency %></td>
+	    <td><%= charge.refunded %></td>
+	    <td><%= link_to 'Show', charge %></td>
+	    <td><%= link_to 'Edit', edit_charge_path(charge) %></td>
+	    <td><%= link_to 'Destroy', charge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  </tr>
+  <% end %>
+<% end %>
