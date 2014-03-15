@@ -1,0 +1,57 @@
+.container
+  / Display failed Transactions
+  .row
+    .col-sm-12
+      %h1
+        Failed Charges
+        
+      %table.table.failed
+        %thead
+          %th
+            = '#'
+          %th
+            Customer Name
+          %th
+            Amount
+          %th
+            Failed Date
+        %tbody
+          = render @failed_transactions
+
+  / Display Disputed Transactions        
+  .row
+    .col-sm-12
+      %h1
+        Disputed Charges
+
+      %table.table.disputed
+        %thead
+          %th
+            = '#'
+          %th
+            Customer Name
+          %th
+            Amount
+          %th
+            Disputed Date
+        %tbody
+          = render @disputed_transactions  
+
+  / Display Succeed Transactions
+  .row
+    .col-sm-12
+      %h1
+        Successful Charges
+
+      %table.table.success
+        %thead
+          %th
+            = '#'
+          %th
+            Customer Name
+          %th
+            Amount
+          %th
+            Date
+        %tbody
+          = render @succeed_transactions
