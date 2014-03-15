@@ -1,0 +1,15 @@
+<h1>Failed Charges</h1>
+<% @failed_trans.each do |trans| %>
+	<div class="failed" style="background-color:#FF0000;">Customer Name :<%= Customer.find(trans.customer_id).first_name %>, <%= Customer.find(trans.customer_id).last_name %>, Charge Amount :<%= trans.amount %></div>
+<% end %>
+
+
+<h1>Disputed Charges</h1>
+<% @dispute_trans.each do |trans| %>
+	<div style="background-color:#FF5400;">Customer Name :<%= Customer.find(trans.customer_id).first_name %>, <%= Customer.find(trans.customer_id).last_name %>, Charge Amount :<%= trans.amount %></div>
+<% end %>
+
+<h1>Successful Charges</h1>
+<% @success_trans.each do |trans| %>
+	<div class="success">Customer Name :<%= Customer.find(trans.customer_id).first_name %>, <%= Customer.find(trans.customer_id).last_name %>, Charge Amount :<%= trans.amount %></div>
+<% end %>
