@@ -1,0 +1,7 @@
+<table width="100%">
+<tr>
+    <td width="40%"><%= @charge.get('name') %></td>
+    <td width="20%"><%= @charge.get('amount') %></td>
+    <td><%= @charge.get('duedate')  %></td>
+</tr>
+</table>

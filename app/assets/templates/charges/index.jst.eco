@@ -1,0 +1,14 @@
+<h1>Charge Status</h1>
+
+<h4 class="failed">Failed Charges</h4>
+<ul id="failed_charges">
+
+</ul>
+<h4 class="disputed">Disputed Charges</h4>
+<ul id="disputed_charges">
+
+</ul>
+<h4 class="charged">Successful Charges</h4>
+<ul id="charges">
+
+</ul>
