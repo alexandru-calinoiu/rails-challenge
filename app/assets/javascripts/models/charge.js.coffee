@@ -1,0 +1,1 @@
+class Demo.Models.Charge extends Backbone.Model
