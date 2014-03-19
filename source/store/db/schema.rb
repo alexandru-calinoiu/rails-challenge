@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140319213437) do
+ActiveRecord::Schema.define(version: 20140319213656) do
 
   create_table "charges", force: true do |t|
     t.integer  "created"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20140319213437) do
     t.string   "currency"
     t.boolean  "refunded"
     t.integer  "customer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customers", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
