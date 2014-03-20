@@ -14,10 +14,17 @@ class Store.Routers.ChargesRouter extends Backbone.Router
     @view = new Store.Views.Charges.NewView(collection: @charges)
     $("#charges").html(@view.render().el)
 
+  # When charges' index route is hit, make an index view out of the charges, then inject its HTML into the #charges div.
   index: ->
     @view = new Store.Views.Charges.IndexView(charges: @charges)
+    # Render the view, then inject its HTML into #the charges div.
+    # This should stay the same. When the index path is hit, fill the #charges div with HTML representing all charges.
     $("#charges").html(@view.render().el)
 
+
+
+
+  # Needn't worry about these here.
   show: (id) ->
     charge = @charges.get(id)
 

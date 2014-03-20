@@ -1,3 +1,4 @@
+# If Store.Views.Charges doesn't exist, set it to an empty object.
 Store.Views.Charges ||= {}
 
 class Store.Views.Charges.ChargeView extends Backbone.View
