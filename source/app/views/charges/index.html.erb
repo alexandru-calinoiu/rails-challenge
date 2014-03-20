@@ -1,0 +1,56 @@
+<h1>Failed Charges</h1>
+<div class="failed-charges-list">
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @f_transactions.each do |tras| %>
+      <tr>
+        <td><%= tras.customer.first_name + ' ' + tras.customer.last_name %></td>
+        <td><%= tras.amount %></td>
+        <td><%= tras.created %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<h1>Disputed Charges</h1>
+<div class="disputed-charges-list">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @d_transactions.each do |tras| %>
+      <tr>
+        <td><%= tras.customer.first_name + ' ' + tras.customer.last_name %></td>
+        <td><%= tras.amount %></td>
+        <td><%= tras.created %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+<h1>Successful Charges</h1>
+<div class="success-charges-list">
+ 
+  <% @s_transactions.each do |tras| %>
+  <div class="row">
+    <%= tras.customer.first_name + ' ' + tras.customer.last_name %>, <%= tras.amount %>, <%= tras.created %>
+  </div>  
+  <% end %>
+  
+</div>
