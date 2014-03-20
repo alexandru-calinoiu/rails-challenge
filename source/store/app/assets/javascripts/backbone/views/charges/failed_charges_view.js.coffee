@@ -9,7 +9,7 @@ class Store.Views.Charges.FailedChargesView extends Backbone.View
 
   # Make an individual charge view by injecting the charge data into a charge template, then append it to the table.
   addOne: (charge) =>
-    view = new Store.Views.Charges.ChargeView({model : charge})
+    view = new Store.Views.Charges.FailedChargeView({model : charge})
     @$("tbody").append(view.render().el)
 
   # This is called by the router when the charges view is requested. It creates a view from the charges it's passed,
