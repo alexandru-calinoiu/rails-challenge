@@ -9,8 +9,8 @@ class Store.Views.Charges.IndexView extends Backbone.View
     @options.charges.bind('reset', @addAllLists)
 
   addAllLists: () =>
-    @addSuccessfulList()
     @addFailedList()
+    @addSuccessfulList()
 
   addSuccessfulList: () =>
     successfulCharges = @options.charges.where {paid: true, refunded: false}
