@@ -10,12 +10,19 @@ class Store.Views.Charges.IndexView extends Backbone.View
 
   addAllLists: () =>
     @addSuccessfulList()
+    @addFailedList()
 
   addSuccessfulList: () =>
     successfulCharges = @options.charges.where {paid: true, refunded: false}
     successfulChargesCollection = new Store.Collections.ChargesCollection(successfulCharges)
     SuccessfulChargesView = new Store.Views.Charges.SuccessfulChargesView({charges: successfulChargesCollection})
     $("body").append(SuccessfulChargesView.render().el)
+
+  addFailedList: () =>
+    failedCharges = @options.charges.where {paid: false}
+    failedChargesCollection = new Store.Collections.ChargesCollection(failedCharges)
+    FailedChargesView = new Store.Views.Charges.FailedChargesView({charges: failedChargesCollection})
+    $("body").append(FailedChargesView.render().el)
 
   # Make an individual charge view by injecting the charge data into a charge template, then append it to the table.
   addOne: (charge) =>
