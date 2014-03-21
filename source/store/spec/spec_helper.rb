@@ -42,4 +42,10 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include Capybara::DSL
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+    Rails.application.load_seed # loading seeds
+  end
 end
