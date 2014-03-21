@@ -3,7 +3,7 @@ Store.Views.Charges ||= {}
 class Store.Views.Charges.SuccessfulChargesView extends Backbone.View
   # The template is charges/index.jst.ejs
   template: JST["backbone/templates/charges/successful_charges"]
-
+  id: 'successful_charges_container'
   addAll: () =>
     @options.charges.each(@addOne)
 

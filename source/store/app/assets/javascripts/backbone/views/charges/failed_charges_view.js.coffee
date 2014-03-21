@@ -2,6 +2,7 @@ Store.Views.Charges ||= {}
 
 class Store.Views.Charges.FailedChargesView extends Backbone.View
   # The template is charges/index.jst.ejs
+  id: 'failed_charges_container'
   template: JST["backbone/templates/charges/failed_charges"]
 
   addAll: () =>
