@@ -9,16 +9,16 @@ describe "Charges index view" do
     it ", so it should have a list with each heading" do
       visit '/charges/'
       page.should have_css('table#failed-charges-table')
-      page.should have_css('table#successful-charges-table')
       page.should have_css('table#disputed-charges-table')
+      page.should have_css('table#successful-charges-table')
     end
   end
   describe "should have the correct number of items in each list", :js => true do
-    it ", so, including header rows, it should have eleven items in the successful list, six in failed charges, and six in disputed charges" do
+    it ", so, including header rows, it should have six in failed charges, six in disputed charges, and eleven items in the successful list" do
       visit '/charges/'
-      page.should have_css('table#successful-charges-table tr', :count => 11)
       page.should have_css('table#failed-charges-table tr', :count => 6)
       page.should have_css('table#disputed-charges-table tr', :count => 6)
+      page.should have_css('table#successful-charges-table tr', :count => 11)
     end
   end
 end
