@@ -16,7 +16,7 @@ describe "Charges index view" do
   describe "should have the correct number of items in each list", :js => true do
     it ", so, including header rows, it should have eleven items in the successful list, six in failed charges, and six in disputed charges" do
       visit '/charges/'
-      page.should have_css('table#successful-charges-table tr', :count => 10)
+      page.should have_css('table#successful-charges-table tr', :count => 11)
       page.should have_css('table#failed-charges-table tr', :count => 6)
       page.should have_css('table#disputed-charges-table tr', :count => 6)
     end
