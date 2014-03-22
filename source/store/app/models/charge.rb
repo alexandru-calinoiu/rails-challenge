@@ -5,6 +5,6 @@ class Charge < ActiveRecord::Base
 
 	private
 	def set_created_property
-		self.created = DateTime.now
+		self.created = DateTime.now.to_i
 	end
 end
