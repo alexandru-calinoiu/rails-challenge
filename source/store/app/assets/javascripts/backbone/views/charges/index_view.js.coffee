@@ -31,11 +31,6 @@ class Store.Views.Charges.IndexView extends Backbone.View
     successfulChargesView = new Store.Views.Charges.SuccessfulChargesView({charges: successfulChargesCollection})
     $("body").append(successfulChargesView.render().el)
 
-  # Make an individual charge view by injecting the charge data into a charge template, then append it to the table.
-  addOne: (charge) =>
-    view = new Store.Views.Charges.ChargeView({model : charge})
-    @$("tbody").append(view.render().el)
-
   # This is called by the router when the charges view is requested. It creates a view from the charges it's passed,
   # then puts the HTML from that view on the view's el property, ready to be put into the page.
   render: =>
