@@ -1,0 +1,4 @@
+* I made the app inside the source directory, in directory called store.
+* The spec file is at spec/requests/charges_spec.rb. Run it with: bundle exec rspec spec/requests/charges_spec.rb
+* I believe I have made the application as specified, with one exception: instead of showing the date disputed charges were disputed, and the date failed charges failed, I just showed the date that these types were created. I was unable to deduce the needed dates using the data structure provided.
+* I reduced duplication, to some extent, in the Backbone views using inheritance, but there is more duplication that could still be removed. I decided to wrap this up instead, as I have already spent a lot of time on it, and you guys seem to want the test returned quickly. Thank you.

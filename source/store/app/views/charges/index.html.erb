@@ -1,0 +1,8 @@
+<div id="charges"></div>
+<script type="text/javascript">
+  $(function() {
+    // Store is the app name
+    window.router = new Store.Routers.ChargesRouter({charges: <%= @charges.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
+</script>
